@@ -1,0 +1,4 @@
+2024-01-13 17:10:07,082:INFO:This is an info message
+2024-01-13 17:10:07,083:WARNING:This is a warning message
+2024-01-13 17:10:07,083:ERROR:This is an error message
+2024-01-13 17:10:07,083:CRITICAL:This is a critical message
