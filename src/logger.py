@@ -2,18 +2,15 @@ import os
 import logging
 from datetime import datetime
 
-log_dir = r"E:\new_mlops\logs"
-if not os.path.exists(log_dir):
-    os.makedirs(log_dir)
+def setup_logger(log_dir):
+    os.makedirs(log_dir, exist_ok=True)  # Creates the directory if it doesn't exist
 
-LOG_FILE = f"{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.log"
-log_file_path = os.path.join(log_dir, LOG_FILE)
+    log_file = f"{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.log"
+    log_file_path = os.path.join(log_dir, log_file)
 
-logging.basicConfig(filename=log_file_path, level=logging.INFO,
-                    format='%(asctime)s:%(levelname)s:%(message)s')
+    logging.basicConfig(filename=log_file_path, level=logging.INFO,
+                        format='%(asctime)s:%(levelname)s:%(message)s')
 
-'''if __name__ == "__main__":
-    logging.info("This is an info message")
-    logging.warning("This is a warning message")
-    logging.error("This is an error message")
-    logging.critical("This is a critical message")'''
+    return logging.getLogger(__name__)
+
+logger = setup_logger(r"E:\new_mlops\logs")
