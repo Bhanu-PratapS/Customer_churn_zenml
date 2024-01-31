@@ -1,0 +1,7 @@
+2024-01-23 23:58:33,792:INFO:Data Ingestion started
+2024-01-23 23:58:33,793:INFO:Data Reading using Pandas library from local system
+2024-01-23 23:58:33,847:INFO:Data Reading completed
+2024-01-23 23:58:33,997:INFO:Dat spliteted into train and test
+2024-01-23 23:58:34,159:INFO:Data Ingestion completed
+2024-01-23 23:58:34,262:INFO:Data Transformation started
+2024-01-23 23:58:34,262:INFO:Error occured in Data Transformation

@@ -10,7 +10,7 @@ def error_message_detailed(error,error_detailed:sys):
     )
     return error_message
 
-class CustmeException(Exception):
+class CustomException(Exception):
     def __init__(self, error_message,error_detailed:sys):
         super().__init__(error_message)
         self.error_message = error_message_detailed(error_message, error_detailed  =error_detailed)
@@ -23,5 +23,5 @@ if __name__  == "__main__":
         a = 1/0
     except Exception as e:
         logger.info("Division by Zero")
-        raise CustmeException(e,sys)
+        raise CustomException(e,sys)
     
